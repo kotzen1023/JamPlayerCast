@@ -291,7 +291,7 @@ public class Response implements Closeable {
      *             if something goes wrong while sending the data.
      */
     private void sendBody(OutputStream outputStream, long pending) throws IOException {
-        long BUFFER_SIZE = 16 * 1024;
+        long BUFFER_SIZE = 32 * 1024;
         byte[] buff = new byte[(int) BUFFER_SIZE];
         boolean sendEverything = pending == -1;
         while (pending > 0 || sendEverything) {
