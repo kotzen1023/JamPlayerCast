@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
+import android.os.Environment;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -34,6 +35,7 @@ import com.seventhmoon.jamplayercast.nanohttpd.protocols.http.response.Response;
 import com.seventhmoon.jamplayercast.queue.ui.QueueListViewActivity;
 import com.seventhmoon.jamplayercast.settings.CastPreference;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -148,6 +150,8 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             //webServer = new WebServer();
+
+
             appNanolets = new AppNanolets();
             appNanolets.start();
 

@@ -459,13 +459,13 @@ public class RouterNanoHTTPD extends NanoHTTPD {
             if (url != null) {
                 if (handler != null) {
                     if (initParameter.length > 0) {
-                        Log.d(TAG, "url = " + url + ", handler = " + handler.toString() + ", initParameter = " + initParameter[0].toString());
+                        //Log.d(TAG, "url = " + url + ", handler = " + handler.toString() + ", initParameter = " + initParameter[0].toString());
                     } else {
-                        Log.d(TAG, "url = " + url + ", handler = " + handler.toString() + ", initParameter = " + initParameter.length);
+                        //Log.d(TAG, "url = " + url + ", handler = " + handler.toString() + ", initParameter = " + initParameter.length);
                     }
                     mappings.add(new UriResource(url, priority + mappings.size(), handler, initParameter));
                 } else {
-                    Log.d(TAG, "url = " + url + ", handler = null, initParameter = " + initParameter.length);
+                    //Log.d(TAG, "url = " + url + ", handler = null, initParameter = " + initParameter.length);
                     mappings.add(new UriResource(url, priority + mappings.size(), notImplemented));
                 }
             }
